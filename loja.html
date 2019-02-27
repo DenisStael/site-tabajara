@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabajara FC</title>
+    <link rel="icon" href="img/TabajaraLogo.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="img/TabajaraLogo.png" type="image/x-icon"/>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        function alteraBotao(id) {
+            $("#" + id + "").css({"background-color": "#6015ff", "color": "#f3f6ff"});
+        }
+
+        function retornaBotao(id) {
+            $("#" + id + "").css({"background-color": "#f3f6ff", "color": "#6015ff"});
+        }
+    </script>
+</head>
+<body id="corpo">
+<header>
+    <div class="col-12">
+        <a href="main.html">
+            <img src="img/TabajaraLogo.png" id="logo" height="150" width="150">
+        </a>
+    </div>
+</header>
+<div class="container-fluid">
+    <div class="row" id="menu">
+        <div class="col-3">
+            <form action="main.html">
+                <input type="submit" id="botao1" class="botaoMenu" value="Início" onmouseenter="alteraBotao('botao1')"
+                       onmouseout="retornaBotao('botao1')">
+            </form>
+        </div>
+        <div class="col-3">
+            <form action="noticias.html">
+                <input type="submit" id="botao2" class="botaoMenu" value="Notícias" onmouseenter="alteraBotao('botao2')"
+                       onmouseout="retornaBotao('botao2')">
+            </form>
+        </div>
+        <div class="col-3">
+            <form action="elenco.html">
+                <input type="submit" id="botao3" class="botaoMenu" value="Time" onmouseenter="alteraBotao('botao3')"
+                       onmouseout="retornaBotao('botao3')">
+            </form>
+        </div>
+        <div class="col-3">
+            <form action="loja.html">
+                <input type="submit" id="botao4" class="botaoMenu" value="Loja"  style="background-color: #6019ff;
+                color: #f3f6ff">
+            </form>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div align="center" id="div5">
+                <h1>Comprar Camiseta</h1>
+                <img src="img/camisa.png" id="camiseta">
+                <input type="button" value="Comprar Camiseta" disabled>
+                <br>
+                <br>
+                <h6>Esse produto se encontra indisponível no momento</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="patrocinadores">
+    <h4 align="center">PATROCINADORES</h4>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <img src="img/patrocinador1.png" id="patrocinadorImg1">
+            </div>
+            <div class="col-3">
+                <img src="img/patrocinador2.png" id="patrocinadorImg2">
+            </div>
+            <div class="col-3">
+                <img src="img/patrocinador3.png" id="patrocinadorImg3">
+            </div>
+            <div class="col-3">
+                <img src="img/patrocinador4.png" id="patrocinadorImg4">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

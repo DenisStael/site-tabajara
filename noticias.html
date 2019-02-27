@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabajara FC</title>
+    <link rel="icon" href="img/TabajaraLogo.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="img/TabajaraLogo.png" type="image/x-icon"/>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        function alteraBotao(id) {
+            $("#" + id + "").css({"background-color": "#6015ff", "color": "#f3f6ff"});
+        }
+
+        function retornaBotao(id) {
+            $("#" + id + "").css({"background-color": "#f3f6ff", "color": "#6015ff"});
+        }
+    </script>
+    <script>
+        var divID = "divInfo";
+        var div2ID = "div2Info"
+
+        function Expandir() {
+            var divObjeto = document.getElementById(divID);
+
+            if (divObjeto.className === "divVisible") {
+                divObjeto.className = "divHidden";
+                $("#Button1").val("Ver Mais")
+            } else {
+                divObjeto.className = "divVisible";
+                $("#Button1").val("Ver Menos")
+            }
+        }
+
+        function ExpandirDiv2() {
+            var divObjeto = document.getElementById(div2ID);
+
+            if (divObjeto.className === "div2Visible") {
+                divObjeto.className = "div2Hidden";
+                $("#Button2").val("Ver Mais")
+            } else {
+                divObjeto.className = "div2Visible";
+                $("#Button2").val("Ver Menos")
+            }
+        }
+    </script>
+</head>
+<body id="corpo">
+<header>
+    <div class="col-12">
+        <a href="main.html">
+            <img src="img/TabajaraLogo.png" id="logo" height="150" width="150">
+        </a>
+    </div>
+</header>
+<div class="container-fluid">
+    <div class="row" id="menu">
+        <div class="col-3">
+            <form action="main.html">
+                <input type="submit" id="botao1" class="botaoMenu" value="Início" onmouseenter="alteraBotao('botao1')"
+                       onmouseout="retornaBotao('botao1')">
+            </form>
+        </div>
+        <div class="col-3">
+            <form action="noticias.html">
+                <input type="submit" id="botao2" class="botaoMenu" value="Notícias" style="background-color: #6019ff;
+                color: #f3f6ff">
+            </form>
+        </div>
+        <div class="col-3">
+            <form action="elenco.html">
+                <input type="submit" id="botao3" class="botaoMenu" value="Time" onmouseenter="alteraBotao('botao3')"
+                       onmouseout="retornaBotao('botao3')">
+            </form>
+        </div>
+        <div class="col-3">
+            <form action="loja.html">
+                <input type="submit" id="botao4" class="botaoMenu" value="Loja" onmouseenter="alteraBotao('botao4')"
+                       onmouseout="retornaBotao('botao4')">
+            </form>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="div1">
+                <h2>Tabajara F.C. enfrenta time do Criança Esperança</h2>
+                <h6>Time é goleado por time mirim no jogo de estréia do novo uniforme</h6>
+                <img src="img/noticia1.jpg" id="imgNoticia1">
+                <h6 align="center">Mesmo comprando juíz, Tabajara F. C. perde para o Criança Esperança</h6>
+                <br>
+                <input type="button" id="Button1" value="Ver mais" style="display: block; margin: 0 auto;"
+                       onclick="return Expandir()"/>
+                <br>
+                <div id="divInfo" class="divHidden">
+                    <p> E o Tabajara Futebol Clube foi goleado de novo, desta vez
+                        enfrentando o time
+                        do Criança
+                        Esperança.
+                        Nem mesmo o novo uniforme do pior time do mundo deu sorte a equipe. O adversário deu um
+                        passeio
+                        no Tabajara, mesmo com o juíz roubando vergonhosamente. Marrentinho Carioca cobrou
+                        pênaltis
+                        inventados e ainda assim perdeu todos. Os poucos e loucos torcedores do Tabajara que
+                        acompanhavam a
+                        partida, alegam que a derrota foi por causa do
+                        desfalque da Vaca, que vem se recuperando da febre aftosa. O time mirim do Criança
+                        Esperança venceu
+                        com
+                        tranqüilidade provando que o futebol brasileiro está com o futuro garantido.
+                    </p>
+                </div>
+            </div>
+
+            <div id="div2">
+                <h2>Craques do Tabajara viram garotos propraganda!</h2>
+                <h6>Perebas do time fazem campanha publicitária</h6>
+                <img src="img/noticia2.jpg" id="imgNoticia2">
+                <h6 align="center">Marrentinho Carioca e Wanthuírson</h6>
+                <br>
+                <input type="button" id="Button2" value="Ver Mais" style="display: block; margin: 0 auto;"
+                       onclick="return ExpandirDiv2()"/>
+                <br>
+                <div id="div2Info" class="div2Hidden">
+                    <p> Os craques do Tabajara Futebol Clube, já não são conhecidos apenas como os
+                        maiores
+                        perebas do futebol brasileiro, agora eles também são garotos propaganda das Organizações
+                        Tabajara.
+                        Marrentinho Carioca, Wanthuirson, Penico, Ruinzinho, Ruinzinho Gaúcho e Vaca foram
+                        contratados para
+                        anunciar a Cola Tabajara, que de tão eficaz é capaz até de colar a bola em qualquer
+                        pereba do time.
+                        Graças a incrível cola, todos os jogadores conseguiram equilibrar a bola na cabeça, e
+                        até deixar a
+                        bola por horas a fio na presa na chuteira, dando inveja a qualquer craque de verdade.
+                        Claro, que a
+                        Cola Tabajara só podia ser mais um produto das incríveis Organizações Tabajara.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="patrocinadores">
+    <h4 align="center">PATROCINADORES</h4>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <img src="img/patrocinador1.png" id="patrocinadorImg1">
+            </div>
+            <div class="col-3">
+                <img src="img/patrocinador2.png" id="patrocinadorImg2">
+            </div>
+            <div class="col-3">
+                <img src="img/patrocinador3.png" id="patrocinadorImg3">
+            </div>
+            <div class="col-3">
+                <img src="img/patrocinador4.png" id="patrocinadorImg4">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

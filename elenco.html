@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabajara FC</title>
+    <link rel="icon" href="img/TabajaraLogo.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="img/TabajaraLogo.png" type="image/x-icon"/>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        function alteraBotao(id) {
+            $("#" + id + "").css({"background-color": "#6015ff", "color": "#f3f6ff"});
+        }
+
+        function retornaBotao(id) {
+            $("#" + id + "").css({"background-color": "#f3f6ff", "color": "#6015ff"});
+        }
+    </script>
+</head>
+<body id="corpo">
+<header>
+    <div class="col-12">
+        <a href="main.html">
+            <img src="img/TabajaraLogo.png" id="logo" height="150" width="150">
+        </a>
+    </div>
+</header>
+<div class="container-fluid">
+    <div class="row" id="menu">
+        <div class="col-3">
+            <form action="main.html">
+                <input type="submit" id="botao1" class="botaoMenu" value="Início" onmouseenter="alteraBotao('botao1')"
+                       onmouseout="retornaBotao('botao1')">
+            </form>
+        </div>
+        <div class="col-3">
+            <form action="noticias.html">
+                <input type="submit" id="botao2" class="botaoMenu" value="Notícias" onmouseenter="alteraBotao('botao2')"
+                       onmouseout="retornaBotao('botao2')">
+            </form>
+        </div>
+        <div class="col-3">
+            <form action="elenco.html">
+                <input type="submit" id="botao3" class="botaoMenu" value="Time" style="background-color: #6019ff;
+                color: #f3f6ff">
+            </form>
+        </div>
+        <div class="col-3">
+            <form action="loja.html">
+                <input type="submit" id="botao4" class="botaoMenu" value="Loja" onmouseenter="alteraBotao('botao4')"
+                       onmouseout="retornaBotao('botao4')">
+            </form>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="div1">
+                <h1>Elenco do Time</h1>
+                <img src="img/time.jpeg" id="imagemTime">
+            </div>
+            <div id="div2">
+                <h1>Escalação</h1>
+                <br>
+                <img src="img/escalacao.jpeg" id="imagemEscalacao">
+            </div>
+        </div>
+        <div class="row">
+            <div id="div3">
+                <h1>Jogadores</h1>
+                <h6>Avaliação do torcedor</h6>
+                <script>
+                    var qtd1 = 0;
+                    var total = 0;
+                    var qtd2 = 0;
+                    var total2 = 0;
+                    var qtd3 = 0;
+                    var total3 = 0;
+                    var qtd4 = 0;
+                    var total4 = 0;
+                    var qtd5 = 0;
+                    var total5 = 0;
+                    var qtd6 = 0;
+                    var total6 = 0;
+                    var qtd7 = 0;
+                    var total7 = 0;
+                    var qtd8 = 0;
+                    var total8 = 0;
+                    var qtd9 = 0;
+                    var total9 = 0;
+                    var qtd10 = 0;
+                    var total10 = 0;
+                    var qtd11 = 0;
+                    var total11 = 0;
+
+                    function avaliacao(index, nota) {
+                        if(index === 1){
+                            qtd1 += 1;
+                            total += nota;
+                            $("#nota1").html(total / qtd1);
+                        } else if(index === 2){
+                            qtd2 += 1;
+                            total2 += nota;
+                            $("#nota2").html(total2 / qtd2);
+                        } else if(index === 3){
+                            qtd3 += 1;
+                            total3 += nota;
+                            $("#nota3").html(total3 / qtd3);
+                        } else if(index === 4){
+                            qtd4 += 1;
+                            total4 += nota;
+                            $("#nota4").html(total4 / qtd4);
+                        } else if(index === 5){
+                            qtd5 += 1;
+                            total5 += nota;
+                            $("#nota5").html(total5 / qtd5);
+                        } else if(index === 6){
+                            qtd6 += 1;
+                            total6 += nota;
+                            $("#nota6").html(total6 / qtd6);
+                        } else if(index === 7){
+                            qtd7 += 1;
+                            total7 += nota;
+                            $("#nota7").html(total7 / qtd7);
+                        } else if(index === 8){
+                            qtd8 += 1;
+                            total8 += nota;
+                            $("#nota8").html(total8 / qtd8);
+                        } else if(index === 9){
+                            qtd9 += 1;
+                            total9 += nota;
+                            $("#nota9").html(total9 / qtd9);
+                        } else if(index === 10){
+                            qtd10 += 1;
+                            total10 += nota;
+                            $("#nota10").html(total10 / qtd10);
+                        } else if(index === 11){
+                            qtd11 += 1;
+                            total11 += nota;
+                            $("#nota11").html(total11 / qtd11);
+                        }
+                    }
+                </script>
+                <table class="table">
+                    <tr>
+                        <td></td>
+                        <td>Total</td>
+                        <td>Nota do Torcedor</td>
+                    </tr>
+                    <tr>
+                        <td><p>Águia</p></td>
+                        <td id="nota1">0</td>
+                        <td>
+                            <input type="button" class="avaliacao" value="1" onclick="avaliacao(1,1)">
+                            <input type="button" class="avaliacao" value="2" onclick="avaliacao(1,2)">
+                            <input type="button" class="avaliacao" value="3" onclick="avaliacao(1,3)">
+                            <input type="button" class="avaliacao" value="4" onclick="avaliacao(1,4)">
+                            <input type="button" class="avaliacao" value="5" onclick="avaliacao(1,5)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>Pirata</p></td>
+                        <td id="nota2">0</td>
+                        <td>
+                            <input type="button" class="avaliacao" value="1" onclick="avaliacao(2,1)">
+                            <input type="button" class="avaliacao" value="2" onclick="avaliacao(2,2)">
+                            <input type="button" class="avaliacao" value="3" onclick="avaliacao(2,3)">
+                            <input type="button" class="avaliacao" value="4" onclick="avaliacao(2,4)">
+                            <input type="button" class="avaliacao" value="5" onclick="avaliacao(2,5)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>Duplex</p></td>
+                        <td id="nota3">0</td>
+                        <td>
+                            <input type="button" class="avaliacao" value="1" onclick="avaliacao(3,1)">
+                            <input type="button" class="avaliacao" value="2" onclick="avaliacao(3,2)">
+                            <input type="button" class="avaliacao" value="3" onclick="avaliacao(3,3)">
+                            <input type="button" class="avaliacao" value="4" onclick="avaliacao(3,4)">
+                            <input type="button" class="avaliacao" value="5" onclick="avaliacao(3,5)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>Ruinzinho</p></td>
+                        <td id="nota4">0</td>
+                        <td>
+                            <input type="button" class="avaliacao" value="1" onclick="avaliacao(4,1)">
+                            <input type="button" class="avaliacao" value="2" onclick="avaliacao(4,2)">
+                            <input type="button" class="avaliacao" value="3" onclick="avaliacao(4,3)">
+                            <input type="button" class="avaliacao" value="4" onclick="avaliacao(4,4)">
+                            <input type="button" class="avaliacao" value="5" onclick="avaliacao(4,5)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>Samambaia</p></td>
+                        <td id="nota5">0</td>
+                        <td>
+                            <input type="button" class="avaliacao" value="1" onclick="avaliacao(5,1)">
+                            <input type="button" class="avaliacao" value="2" onclick="avaliacao(5,2)">
+                            <input type="button" class="avaliacao" value="3" onclick="avaliacao(5,3)">
+                            <input type="button" class="avaliacao" value="4" onclick="avaliacao(5,4)">
+                            <input type="button" class="avaliacao" value="5" onclick="avaliacao(5,5)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>Ruinzinho Gaúcho</p></td>
+                        <td id="nota6">0</td>
+                        <td>
+                            <input type="button" class="avaliacao" value="1" onclick="avaliacao(6,1)">
+                            <input type="button" class="avaliacao" value="2" onclick="avaliacao(6,2)">
+                            <input type="button" class="avaliacao" value="3" onclick="avaliacao(6,3)">
+                            <input type="button" class="avaliacao" value="4" onclick="avaliacao(6,4)">
+                            <input type="button" class="avaliacao" value="5" onclick="avaliacao(6,5)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>Penico</p></td>
+                        <td id="nota7">0</td>
+                        <td>
+                            <input type="button" class="avaliacao" value="1" onclick="avaliacao(7,1)">
+                            <input type="button" class="avaliacao" value="2" onclick="avaliacao(7,2)">
+                            <input type="button" class="avaliacao" value="3" onclick="avaliacao(7,3)">
+                            <input type="button" class="avaliacao" value="4" onclick="avaliacao(7,4)">
+                            <input type="button" class="avaliacao" value="5" onclick="avaliacao(7,5)">
+                    </tr>
+                    <tr>
+                        <td><p>Múmia</p></td>
+                        <td id="nota8">0</td>
+                        <td>
+                            <input type="button" class="avaliacao" value="1" onclick="avaliacao(8,1)">
+                            <input type="button" class="avaliacao" value="2" onclick="avaliacao(8,2)">
+                            <input type="button" class="avaliacao" value="3" onclick="avaliacao(8,3)">
+                            <input type="button" class="avaliacao" value="4" onclick="avaliacao(8,4)">
+                            <input type="button" class="avaliacao" value="5" onclick="avaliacao(8,5)">
+                    </tr>
+                    <tr>
+                        <td><p>Wanthuyrson</p></td>
+                        <td id="nota9">0</td>
+                        <td>
+                            <input type="button" class="avaliacao" value="1" onclick="avaliacao(9,1)">
+                            <input type="button" class="avaliacao" value="2" onclick="avaliacao(9,2)">
+                            <input type="button" class="avaliacao" value="3" onclick="avaliacao(9,3)">
+                            <input type="button" class="avaliacao" value="4" onclick="avaliacao(9,4)">
+                            <input type="button" class="avaliacao" value="5" onclick="avaliacao(9,5)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>Marrentinho Carioca</p></td>
+                        <td id="nota10">0</td>
+                        <td>
+                            <input type="button" class="avaliacao" value="1" onclick="avaliacao(10,1)">
+                            <input type="button" class="avaliacao" value="2" onclick="avaliacao(10,2)">
+                            <input type="button" class="avaliacao" value="3" onclick="avaliacao(10,3)">
+                            <input type="button" class="avaliacao" value="4" onclick="avaliacao(10,4)">
+                            <input type="button" class="avaliacao" value="5" onclick="avaliacao(10,5)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>Vaca</p></td>
+                        <td id="nota11">0</td>
+                        <td>
+                            <input type="button" class="avaliacao" value="1" onclick="avaliacao(11,1)">
+                            <input type="button" class="avaliacao" value="2" onclick="avaliacao(11,2)">
+                            <input type="button" class="avaliacao" value="3" onclick="avaliacao(11,3)">
+                            <input type="button" class="avaliacao" value="4" onclick="avaliacao(11,4)">
+                            <input type="button" class="avaliacao" value="5" onclick="avaliacao(11,5)">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="div4">
+                <h1>Posição no Campeonato</h1>
+                <br>
+                <img src="img/tabela.jpg" id="tabela">
+            </div>
+        </div>
+    </div>
+</div>
+<div id="patrocinadores">
+    <h4 align="center">PATROCINADORES</h4>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <img src="img/patrocinador1.png" id="patrocinadorImg1">
+            </div>
+            <div class="col-3">
+                <img src="img/patrocinador2.png" id="patrocinadorImg2">
+            </div>
+            <div class="col-3">
+                <img src="img/patrocinador3.png" id="patrocinadorImg3">
+            </div>
+            <div class="col-3">
+                <img src="img/patrocinador4.png" id="patrocinadorImg4">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

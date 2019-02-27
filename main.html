@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabajara FC</title>
+    <link rel="icon" href="img/TabajaraLogo.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="img/TabajaraLogo.png" type="image/x-icon"/>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        function alteraBotao(id) {
+            $("#" + id + "").css({"background-color": "#6015ff", "color": "#f3f6ff"});
+        }
+
+        function retornaBotao(id) {
+            $("#" + id + "").css({"background-color": "#f3f6ff", "color": "#6015ff"});
+        }
+    </script>
+    <script src="js/bootstrap.js"></script>
+</head>
+<body id="corpo">
+<header>
+    <div class="col-12">
+        <a href="main.html">
+            <img src="img/TabajaraLogo.png" id="logo" height="150" width="150">
+        </a>
+    </div>
+</header>
+<div class="container-fluid">
+    <div class="row" id="menu">
+        <div class="col-3">
+            <form action="main.html">
+                <input type="submit" id="botao1" class="botaoMenu" value="Início" style="background-color: #6019ff;
+                color: #f3f6ff">
+            </form>
+        </div>
+        <div class="col-3">
+            <form action="noticias.html">
+                <input type="submit" id="botao2" class="botaoMenu" value="Notícias" onmouseenter="alteraBotao('botao2')"
+                       onmouseout="retornaBotao('botao2')">
+            </form>
+        </div>
+        <div class="col-3">
+            <form action="elenco.html">
+                <input type="submit" id="botao3" class="botaoMenu" value="Time" onmouseenter="alteraBotao('botao3')"
+                       onmouseout="retornaBotao('botao3')">
+            </form>
+        </div>
+        <div class="col-3">
+            <form action="loja.html">
+                <input type="submit" id="botao4" class="botaoMenu" value="Loja" onmouseenter="alteraBotao('botao4')"
+                       onmouseout="retornaBotao('botao4')">
+            </form>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="div1">
+                <h1>História</h1>
+                <img src="img/imagemHistoria.jpeg" id="imagemHistoria">
+                <br>
+                <p> O Tabajara Futebol Clube foi fundado no dia 16 de julho de 1950, o mesmo dia que o Brasil perdeu a Copa do Mundo
+                    para o Uruguai. Seu único título a ostentar era o de pior equipe do mundo, tendo sido rebaixado no
+                    Campeonato Carioca, no campeonato da rua e no campeonato de futebol de botão. Seu estádio era o
+                    Tabajarão, estádio de capacidade desconhecida inaugurado "em um dia desses", e cujo jogo de estreia
+                    foi uma em que o Tabajara foi derrotado por 0x38 para o São Perebano.
+                </p>
+                <p>
+                    O primeiro gol da história do clube foi marcado por uma vaca, que logo tornou-se titular da equipe,
+                    na derrota de 60 a 1 para o Setenta e Cinco de Piracicaba, time formado por veteranos com mais de 75
+                    anos de idade. Posteriormente, o clube sofreu derrotas humilhantes para equipes como Caquético
+                    Mineiro - time formado por idosos que jogavam com andadores - e Real Jabuti - time formado por
+                    jabutis de verdade
+                </p>
+            </div>
+            <div id="div2">
+                <h1>Fotos</h1>
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="img/imagemCarousel1.jpg" alt="Primeiro slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/imagemCarousel2.jpg" alt="Segundo slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/imagemCarousel3.jpg" alt="Terceiro slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/imagemCarousel4.jpg" alt="Quarto slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Próximo</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="patrocinadores">
+    <h4 align="center">PATROCINADORES</h4>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <img src="img/patrocinador1.png" id="patrocinadorImg1">
+            </div>
+            <div class="col-3">
+                <img src="img/patrocinador2.png" id="patrocinadorImg2">
+            </div>
+            <div class="col-3">
+                <img src="img/patrocinador3.png" id="patrocinadorImg3">
+            </div>
+            <div class="col-3">
+                <img src="img/patrocinador4.png" id="patrocinadorImg4">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
